@@ -1,10 +1,10 @@
-let h1= document.querySelector("h1")
-window.addEventListener("keydown" , function(myInfo){
-console.log(myInfo.key)
-if (myInfo.key=== " "){
-    h1.textContent="Space mat daba na bro"
-}else{
-h1.textContent=myInfo.key
-}
+let btn=document.querySelector("#btn")
+let inp=document.querySelector("#myInp")
+btn.addEventListener("click",function(){
+inp.click();
 
+})
+inp.addEventListener("change", function(myInfo){
+    console.log(myInfo.target.files[0].name);
+    btn.textContent= myInfo.target.files[0].name;
 })
